@@ -1,0 +1,27 @@
+@startuml
+interface FiguraGeometrica{
+    +calcularArea() : double
+    +calcularPerimetro() : double
+}
+abstract class FiguraConLados extends FiguraGeometrica{
+    +numLados: int
+    +FiguraConLados(numLados: int)
+    (abstract) +calcularArea() : double
+    (abstract) +calcularPerimetro() : double
+}
+class Triangulo extends FiguraConLados{
+    +Triangulo()
+    +calcularArea() : double
+    +calcularPerimetro() : double
+}
+class Cuadrado extends FiguraConLados{
+    +Cuadrado()
+    +calcularArea() : double
+    +calcularPerimetro() :double
+}
+class Pentagono extends FiguraConLados{
+    + Pentagono ()
+    + calcularArea () : double
+    + calcularPerimetro ():double
+}
+@enduml

@@ -1,0 +1,17 @@
+@startuml
+abstract class Empleado{
+    -nombre: String
+    -salario : double
+    {abstract} + calcularSalario(): double
+}
+class EmpleadoTiempoCompleto extends Empleado{
+    -horasTrabajadas: int
+    +EmpleadoTiempoCompleto(nombre: String, tarifaHora : double, bonoHora: double, limiteHorasExtra: int)
+    +calcularSalario(): double 
+}   
+class EmpleadoPorComision extends Empleado{
+    -ventasTotales: double
+    +EmpleadoPorComision(nombre: String, porcntajeComision:double, bonoMetaVentas: double, metaVentas: double)
+    +calcularSalario(): double
+}
+@enduml
